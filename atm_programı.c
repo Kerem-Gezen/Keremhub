@@ -1,8 +1,8 @@
-//Basit ATM yapısı do-while döngüsü ve switch-case ile.
+//Basit ATM yapÄ±sÄ± do-while dÃ¶ngÃ¼sÃ¼ ve switch-case ile.
 #include<stdio.h>
 int main(){
 	int islem;
-	int tekrar=1;                           //döngünün kontrol değişkeni 'tekrar'.
+	int tekrar=1;                           //dÃ¶ngÃ¼nÃ¼n kontrol deÄŸiÅŸkeni 'tekrar'.
 	char bakiye[]="3500 TL niz mevcut.";
 	
 	do{
@@ -11,12 +11,12 @@ int main(){
 	printf("1-Para Cekme\n2-Para Yatirma\n3-Bakiye Sorgulama\n4-Havale\n5-Kart Iade\n\n");
 	scanf("%d",&islem);
 	
-		if( islem<1 || islem>5){			 				       //belirli aralıktaki işlemlerden farklı bir sayı girilince döngüyü tekrarlar continue ile.
+		if( islem<1 || islem>5){			 				       //belirli aralÄ±ktaki iÅŸlemlerden farklÄ± bir sayÄ± girilince dÃ¶ngÃ¼yÃ¼ tekrarlar continue ile.
 			printf("Gecersiz giris! Lutfen tekrar deneyin.\n\n");
-			continue;						                      //contunie can alıcı yer burada döngünün tekrarlamasını sağlıyor.
-		} 														  //continue komutu: Geçersiz giriş yapıldığında döngü hemen bir sonraki adımı atlar ve kullanıcıdan tekrar giriş bekler.
+			continue;						                      //contunie can alÄ±cÄ± yer burada dÃ¶ngÃ¼nÃ¼n tekrarlamasÄ±nÄ± saÄŸlÄ±yor.
+		} 														  //continue komutu: GeÃ§ersiz giriÅŸ yapÄ±ldÄ±ÄŸÄ±nda dÃ¶ngÃ¼ hemen bir sonraki adÄ±mÄ± atlar ve kullanÄ±cÄ±dan tekrar giriÅŸ bekler.
 	
-	switch(islem){												//switch-case yapısı.
+	switch(islem){												//switch-case yapÄ±sÄ±.
 		
 		case 1:
 			printf("Lutfen cekmek istediginiz miktari yaziniz:\n");
@@ -32,15 +32,15 @@ int main(){
 			break;
 		case 5:
 			printf("Kartiniz iade ediliyor.\n");
-			tekrar=0;											//çıkış yapılıyor tekrar kontrol değişkeni 0 a atanıp.								
+			tekrar=0;											//Ã§Ä±kÄ±ÅŸ yapÄ±lÄ±yor tekrar kontrol deÄŸiÅŸkeni 0 a atanÄ±p.								
 			break;
 	}
 		if(islem!=5){
-			printf("\nBaska bir islem yapmak ister misiniz?:(Evet:1),(Hayir:0)"); //burası çok önemli kullanıcıdan tekrar değişkeninin değerini alıp döngüyü bitiriyor kullanıcı 0 girerse çünkü buraya kadar tekrar=1 hep.
-			scanf("%d",&tekrar);                                                 //farklı yollarla da bitirelibilir case 1 2 3 ve 4. Ama burada bunu kullandık.
+			printf("\nBaska bir islem yapmak ister misiniz?:(Evet:1),(Hayir:0)"); //burasÄ± Ã§ok Ã¶nemli kullanÄ±cÄ±dan tekrar deÄŸiÅŸkeninin deÄŸerini alÄ±p dÃ¶ngÃ¼yÃ¼ bitiriyor kullanÄ±cÄ± 0 girerse Ã§Ã¼nkÃ¼ buraya kadar tekrar=1 hep.
+			scanf("%d",&tekrar);                                                 //farklÄ± yollarla da bitirelibilir case 1 2 3 ve 4. Ama burada bunu kullandÄ±k.
 		}
 
-} while(tekrar==1); 											//Bu koşul döngünün devam etmesini sağlar. Eğer kullanıcı case 5'i seçerse, tekrar değişkeni 0 olacak ve döngü sonlanacaktır.
+} while(tekrar==1); 											//Bu koÅŸul dÃ¶ngÃ¼nÃ¼n devam etmesini saÄŸlar. EÄŸer kullanÄ±cÄ± case 5'i seÃ§erse, tekrar deÄŸiÅŸkeni 0 olacak ve dÃ¶ngÃ¼ sonlanacaktÄ±r.
 		
 	printf("Iyi gunler dileriz..");
 	
